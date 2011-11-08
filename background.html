@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jaconda Toast Background</title>
+    <script>
+        chrome.extension.onRequest.addListener(function(r) {            
+            var notif = webkitNotifications.createNotification(r.ico, r.name, r.msg);
+            notif.onclick = function() {
+                window.focus();
+                this.cancel();
+            };
+            notif.show();
+        });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

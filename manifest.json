@@ -1,0 +1,11 @@
+{
+    "name": "Jaconda Toast",
+    "version": "0.1",
+    "description": "WebKit \"toast\" notifications for Jaconda",
+    "background_page": "background.html",
+    "permissions": ["tabs", "notifications"],
+    "content_scripts": [{
+        "matches": ["https://*.jaconda.im/rooms/*"],
+        "js": ["jquery.min.js", "content.js"]
+    }]    
+}
